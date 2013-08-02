@@ -24,15 +24,14 @@ public class LogMessageDefault implements ILogMessage, Serializable {
 	private LogCategoryEnum categoria;
 	private Date date;
 
-	public LogMessageDefault(int id, int idModule, IMessage message, LogCategoryEnum categoria) {
+	public LogMessageDefault(int id, int idModule, IMessage message,LogCategoryEnum categoria) {
 		this.id = id;
-		this.id = idModule;
+		this.idModule = idModule;
 		this.message = message;
 		this.categoria = categoria;
 		this.date = new Date();
 
 	}
-
 
 	@Override
 	public int getId() {
@@ -58,7 +57,5 @@ public class LogMessageDefault implements ILogMessage, Serializable {
 	public Integer getIdModule() {
 		return this.idModule;
 	}
-
-
 
 }

@@ -1,5 +1,7 @@
 package br.com.sumba.enumerator;
 
+import java.io.Serializable;
+
 /**
  * Enumerator responsável em armazenar as categorias de Log do Sistema.<BR>
  * 

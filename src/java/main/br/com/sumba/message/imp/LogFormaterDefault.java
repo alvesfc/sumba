@@ -41,9 +41,7 @@ public class LogFormaterDefault implements ILogFormater, Serializable {
 			}else{
 				sb.append(log.getMessage().getTranslation().transnlate(locale));
 			}
-			
-			
-			
+
 		}
 		return sb.toString();
 	}
