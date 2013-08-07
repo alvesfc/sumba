@@ -1,32 +1,31 @@
 package br.com.sumba.message;
 
+import java.io.Serializable;
 import java.util.List;
 
 import br.com.lombok.enumerator.LocaleEnum;
-import br.com.nias.bundle.IMessageBundle;
-
-
 
 /**
- * Interface respons·vel em definir os MÈtodos necess·rios para<BR>
- * formataÁ„o da mensagem de log
+ * Interface respons√°vel em definir os M√©todos necess√°rios para<BR>
+ * formata√ß√£o da mensagem de log
  * 
  * @author Marcos Alves Cunha
  * @version 1.0
  * 
  */
-public interface ILogFormater {
+public interface ILogFormater extends Serializable {
 
-
-	/**
-	 * MÈtodo respons·vel em formatar a mensagem de Log.
-	 * 
-	 * @param listLogMessage
-	 *            Lista de objetos do tipo {@link ILogMessage} com os dados da mensagem de
-	 *            log.
-	 * @param bundle objeto do tipo {@link IMessageBundle} para obter o valor da mensagem.
-	 * @return String com a mensagem formatada.
-	 */
-	public String format(List<ILogMessage> listLogMessage, LocaleEnum locale);
+    /**
+     * M√©todo respons√°vel em formatar a mensagem de Log.
+     * 
+     * @param listLogMessage
+     *            Lista de objetos do tipo {@link ILogMessage} com os dados da
+     *            mensagem de log.
+     * @param bundle
+     *            objeto do tipo {@link IMessageBundle} para obter o valor da
+     *            mensagem.
+     * @return String com a mensagem formatada.
+     */
+    String format(List<ILogMessage> listLogMessage, LocaleEnum locale);
 
 }

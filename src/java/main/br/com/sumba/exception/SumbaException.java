@@ -15,53 +15,53 @@ import br.com.sumba.message.ILogMessage;
  */
 public class SumbaException extends Exception {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private List<ILogMessage> listLogMessage;
+    private List<ILogMessage> listLogMessage;
 
-	/**
-	 * Construtor que recebe como argumento um objeto {@link ILogMessage}<BR>
-	 * para o tratamento da excecão.
-	 * 
-	 * @param logMessage
-	 *            - Objeto contendo os dados da mensagem de excecão.
-	 */
-	public SumbaException(ILogMessage logMessage) {
-		this.listLogMessage = new ArrayList<ILogMessage>();
-		this.listLogMessage.add(logMessage);
-	}
+    /**
+     * Construtor que recebe como argumento um objeto {@link ILogMessage}<BR>
+     * para o tratamento da excecão.
+     * 
+     * @param logMessage
+     *            - Objeto contendo os dados da mensagem de excecão.
+     */
+    public SumbaException(ILogMessage logMessage) {
+        this.listLogMessage = new ArrayList<ILogMessage>();
+        this.listLogMessage.add(logMessage);
+    }
 
-	/**
-	 * Construtor que recebe com argumento uma lista de objetos
-	 * {@link ILogMessage}<BR>
-	 * para o tratamento da excecão.
-	 * 
-	 * @param listLogMessage
-	 *            - Objeto contendo uma lista com os dados da mensagem de
-	 *            excecão.
-	 */
-	public SumbaException(List<ILogMessage> listLogMessage) {
-		this.listLogMessage = listLogMessage;
-	}
+    /**
+     * Construtor que recebe com argumento uma lista de objetos
+     * {@link ILogMessage}<BR>
+     * para o tratamento da excecão.
+     * 
+     * @param listLogMessage
+     *            - Objeto contendo uma lista com os dados da mensagem de
+     *            excecão.
+     */
+    public SumbaException(List<ILogMessage> listLogMessage) {
+        this.listLogMessage = listLogMessage;
+    }
 
-	/**
-	 * Método responsável em retornar um objeto {@link ILogMessage}<BR>
-	 * com os detalhes da excecão.
-	 * 
-	 * @return {@link ILogMessage} com os detalhes da excecão.
-	 */
-	public ILogMessage getLogMessage() {
-		return this.listLogMessage.get(0);
-	}
+    /**
+     * Método responsável em retornar um objeto {@link ILogMessage}<BR>
+     * com os detalhes da excecão.
+     * 
+     * @return {@link ILogMessage} com os detalhes da excecão.
+     */
+    public ILogMessage getLogMessage() {
+        return this.listLogMessage.get(0);
+    }
 
-	/**
-	 * Método responsável em retornar uma lista de objetos {@link ILogMessage}<BR>
-	 * com os detalhes da excecão.
-	 * 
-	 * @return lista de {@link ILogMessage} com os detalhes da excecão.
-	 */
-	public List<ILogMessage> getListLogMessage() {
-		return this.listLogMessage;
-	}
+    /**
+     * Método responsável em retornar uma lista de objetos {@link ILogMessage}<BR>
+     * com os detalhes da excecão.
+     * 
+     * @return lista de {@link ILogMessage} com os detalhes da excecão.
+     */
+    public List<ILogMessage> getListLogMessage() {
+        return this.listLogMessage;
+    }
 
 }

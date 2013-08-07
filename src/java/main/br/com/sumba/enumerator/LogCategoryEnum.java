@@ -1,7 +1,5 @@
 package br.com.sumba.enumerator;
 
-import java.io.Serializable;
-
 /**
  * Enumerator responsável em armazenar as categorias de Log do Sistema.<BR>
  * 
@@ -11,24 +9,22 @@ import java.io.Serializable;
  */
 public enum LogCategoryEnum {
 
-	ALTA(0, "msg_alta"),
-	MEDIA(1, "msg_media"),
-	BAIXA(2, "msg_baixa");
+    HIGHT(0, "msg_hight"), MEDIA(1, "msg_media"), LOW(2, "msg_low");
 
-	private int id;
-	private String descrption;
+    private int id;
+    private String descrption;
 
-	private LogCategoryEnum(int id, String descrption) {
-		this.id = id;
-		this.descrption = descrption;
-	}
+    private LogCategoryEnum(int id, String descrption) {
+        this.id = id;
+        this.descrption = descrption;
+    }
 
-	public int getId() {
-		return id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public String getDescrption() {
-		return descrption;
-	}
+    public String getDescrption() {
+        return descrption;
+    }
 
 }

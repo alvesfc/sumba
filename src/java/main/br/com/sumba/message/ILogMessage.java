@@ -6,50 +6,48 @@ import br.com.nias.message.IMessage;
 import br.com.sumba.enumerator.LogCategoryEnum;
 
 /**
- * Interface respons·vel em definir os mÈtodos necess·rios para<BR>
- * manipular a mensagem de erro que ser„o adicionada ao Log.
+ * Interface respons√°vel em definir os m√©todos necess√°rios para<BR>
+ * manipular a mensagem de erro que ser√£o adicionada ao Log.
  * 
  * @author Marcos Alves Cunha
  * @version 1.0
  * 
  */
-public interface ILogMessage  {
+public interface ILogMessage {
 
-	/**
-	 * MÈtodo respons·vel em retornar o id da mensagem da exceÁ„o.
-	 * 
-	 * @return inteiro representando o Id da exceÁ„o.
-	 */
-	public abstract int getId();
+    /**
+     * M√©todo Respons√°vel em retornar o id da mensagem da exce√ß√£o.
+     * 
+     * @return inteiro representando o Id da exce√ß√£o.
+     */
+    int getId();
 
-	/**
-	 * MÈtodo respons·vel em retornar a menssagem de exceÁ„o.
-	 * 
-	 * @return {@link IMessage} objrto contendo os dados da mensagem 
-	 */
-	public abstract IMessage getMessage();
+    /**
+     * M√©todo Respons√°vel em retornar a menssagem de exce√ß√£o.
+     * 
+     * @return {@link IMessage} objrto contendo os dados da mensagem
+     */
+    IMessage getMessage();
 
-	/**
-	 * MÈtodo respons·vel em a categoria do Log
-	 * 
-	 * @return objeto {@link LogCategoryEnum} contendo a categoria do Log.
-	 */
-	public abstract LogCategoryEnum getCategory();
-	
-	/**
-	 * MÈtodo respons·vel em buscar o id do mÛdulo
-	 * 
-	 * @return Integer contendo o id do mÛdulo.
-	 */
-	public abstract Integer getIdModule();
-	
-	/**
-	 * M»todo respons·vel em retornar a data da mensagem de exceÁ„o.
-	 * 
-	 * @return String contendo a data da mensagem de exceÁ„o.
-	 */
-	public abstract Date getDate();
+    /**
+     * M√©todo Respons√°vel em a categoria do Log
+     * 
+     * @return objeto {@link LogCategoryEnum} contendo a categoria do Log.
+     */
+    LogCategoryEnum getCategory();
 
+    /**
+     * M√©todo Respons√°vel em buscar o id do m√≥dulo
+     * 
+     * @return Integer contendo o id do m√≥dulo.
+     */
+    Integer getIdModule();
 
+    /**
+     * M√©todo Respons√°vel em retornar a data da mensagem de exce√ß√£o.
+     * 
+     * @return String contendo a data da mensagem de exce√ß√£o.
+     */
+    Date getDate();
 
 }

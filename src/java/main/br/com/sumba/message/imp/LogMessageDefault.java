@@ -8,7 +8,7 @@ import br.com.sumba.enumerator.LogCategoryEnum;
 import br.com.sumba.message.ILogMessage;
 
 /**
- * Classe que implementa os métodos definidos pela interface {@link ILogMessage}
+ * Classe que implementa os mÃ©todos definidos pela interface {@link ILogMessage}
  * .
  * 
  * @author Marcos Alves Cunha
@@ -17,45 +17,45 @@ import br.com.sumba.message.ILogMessage;
  */
 public class LogMessageDefault implements ILogMessage, Serializable {
 
-	private static final long serialVersionUID = 1L;
-	private int id;
-	private int idModule;
-	private IMessage message;
-	private LogCategoryEnum categoria;
-	private Date date;
+    private static final long serialVersionUID = 1L;
+    private int id;
+    private int idModule;
+    private IMessage message;
+    private LogCategoryEnum categoria;
+    private Date date;
 
-	public LogMessageDefault(int id, int idModule, IMessage message,LogCategoryEnum categoria) {
-		this.id = id;
-		this.idModule = idModule;
-		this.message = message;
-		this.categoria = categoria;
-		this.date = new Date();
+    public LogMessageDefault(int id, int idModule, IMessage message,LogCategoryEnum categoria) {
+        this.id = id;
+        this.idModule = idModule;
+        this.message = message;
+        this.categoria = categoria;
+        this.date = new Date();
 
-	}
+    }
 
-	@Override
-	public int getId() {
-		return this.id;
-	}
+    @Override
+    public int getId() {
+        return this.id;
+    }
 
-	@Override
-	public IMessage getMessage() {
-		return this.message;
-	}
+    @Override
+    public IMessage getMessage() {
+        return this.message;
+    }
 
-	@Override
-	public LogCategoryEnum getCategory() {
-		return this.categoria;
-	}
+    @Override
+    public LogCategoryEnum getCategory() {
+        return this.categoria;
+    }
 
-	@Override
-	public Date getDate() {
-		return this.date;
-	}
+    @Override
+    public Date getDate() {
+        return (Date) this.date.clone();
+    }
 
-	@Override
-	public Integer getIdModule() {
-		return this.idModule;
-	}
+    @Override
+    public Integer getIdModule() {
+        return this.idModule;
+    }
 
 }
